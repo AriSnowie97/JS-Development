@@ -1,0 +1,39 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+}
+
+body { font-family: sans-serif; 
+    background: #f0f2f5; 
+    color: #333; 
+    line-height: 1.6; }
+.container { 
+    max-width: 800px; 
+    margin: 20px auto; 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+h1, h3 { color: var(--primary); 
+    text-align: center; }
+
+form { display: grid; gap: 10px; }
+input, textarea { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+button { padding: 12px; cursor: pointer; border: none; border-radius: 4px; transition: 0.3s; }
+button[type="submit"] { background: var(--accent); color: white; }
+#clear-btn { background: #e74c3c; color: white; }
+
+.hidden { display: none; }
+
+/* Стиль готового резюме */
+.resume-paper {
+    background: white;
+    padding: 40px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+.resume-header { border-bottom: 2px solid var(--primary); margin-bottom: 20px; }
+.resume-section { margin-bottom: 15px; }
+.resume-section h4 { text-transform: uppercase; color: var(--accent); margin-bottom: 5px; }
