@@ -1,6 +1,8 @@
 "use strict";
 import { userData } from './data.js';
 import * as Utils from './utils.js';
+import { x, y } from './xy.js';
+import { calculateSum } from './function.js';
 
 const userOut = document.getElementById('user-output');
 const mathOut = document.getElementById('math-output');
@@ -25,3 +27,5 @@ document.getElementById('calc-mult').addEventListener('click', () => {
     const result = Utils.multiply(5, 10);
     mathOut.textContent = `Добуток 5 x 10 = ${result}`;
 });
+
+console.log(calculateSum(5, 10), x, y);

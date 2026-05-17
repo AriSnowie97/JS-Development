@@ -9,7 +9,7 @@ async function getPokemonData(nameOrId) {
     
     try {
         // Fetch API запит
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId.toLowerCase()}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}`);
         
         // Перевірка статусу (Завдання 6.4)
         if (!response.ok) {
