@@ -28,14 +28,16 @@ async function getPokemonData(nameOrId) {
 
 // 2. Функція відображення (DOM маніпуляції)
 function renderPokemon(pokemon) {
-    const { name, sprites, height, weight, types } = pokemon; // Деструктуризація
-    
+    const { name, sprites, height, weight, types, stats } = pokemon; // Деструктуризація
+    const hpStat = stats.find(s => s.stat.name === 'hp');
+    const hpValue = hpStat ? hpStat.base_stat : 'Невідомо';
     displayArea.innerHTML = `
         <article>
             <img src="${sprites.front_default}" alt="${name}">
             <h2>${name.toUpperCase()}</h2>
             <p>Тип: ${types.map(t => t.type.name).join(', ')}</p>
             <p>Ріст: ${height/10} м | Вага: ${weight/10} кг</p>
+            <p>HP: ${hpValue}</p>
         </article>
     `;
 }
